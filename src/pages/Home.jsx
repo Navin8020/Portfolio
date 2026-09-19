@@ -2,84 +2,91 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <section className="home-page">
+    <section className="home-v2">
 
-      {/* LEFT SIDE */}
-      <div className="home-content">
+      <div className="home-v2-container">
 
-        <p className="small-title">
-          WELCOME TO MY PORTFOLIO
-        </p>
+        {/* LEFT */}
+        <div className="home-v2-left">
 
-        <h1>
-          Hi, I'm <span>Navinkumar D</span>
-        </h1>
-
-        <h2>
-          Computer Science Graduate & Aspiring Software Developer
-        </h2>
-
-        <p className="home-description">
-          I am passionate about software development, modern web
-          technologies, artificial intelligence, and machine learning.
-          I enjoy creating practical applications that solve real-world
-          problems.
-        </p>
-
-        {/* BUTTONS */}
-        <div className="home-buttons">
-
-          <Link
-            to="/projects"
-            className="primary-button"
-          >
-            View My Projects ↗
-          </Link>
-
-          <Link
-            to="/resume"
-            className="secondary-button"
-          >
-            View Resume
-          </Link>
-
-        </div>
-
-        {/* QUICK INFO */}
-        <div className="home-info">
-
-          <div className="info-item">
-            <strong>01</strong>
-            <span>Web Development</span>
+          <div className="home-v2-label">
+            <span></span>
+            WELCOME TO MY PORTFOLIO
           </div>
 
-          <div className="info-item">
-            <strong>02</strong>
-            <span>AI & Machine Learning</span>
+          <h1 className="home-v2-title">
+            Hi, I'm
+            <strong>Navinkumar D</strong>
+          </h1>
+
+          <h2 className="home-v2-subtitle">
+            Computer Science Graduate &amp; Aspiring Software Developer
+          </h2>
+
+          <p className="home-v2-description">
+            I am passionate about software development, modern web
+            technologies, artificial intelligence, and machine learning.
+            I enjoy creating practical applications that solve real-world
+            problems.
+          </p>
+
+          <div className="home-v2-buttons">
+            <Link to="/projects" className="home-v2-primary">
+              View My Projects <span>↗</span>
+            </Link>
+
+            <Link to="/resume" className="home-v2-secondary">
+              View Resume
+            </Link>
           </div>
 
-          <div className="info-item">
-            <strong>03</strong>
-            <span>Software Development</span>
+          <div className="home-v2-info">
+
+            <div>
+              <b>01</b>
+              <span>Web Development</span>
+            </div>
+
+            <div>
+              <b>02</b>
+              <span>AI &amp; Machine Learning</span>
+            </div>
+
+            <div>
+              <b>03</b>
+              <span>Software Development</span>
+            </div>
+
           </div>
 
         </div>
 
-      </div>
 
-      {/* RIGHT SIDE */}
-      <div className="home-image">
+        {/* RIGHT */}
+        <div className="home-v2-right">
 
-        <div className="profile-decoration"></div>
+          <div className="home-v2-glow"></div>
 
-        <img
-          src="/profile.png"
-          alt="Navinkumar D"
-        />
+          <div className="home-v2-ring home-v2-ring-1"></div>
+          <div className="home-v2-ring home-v2-ring-2"></div>
 
-        <div className="profile-badge">
-          <span className="status-dot"></span>
-          Open to Opportunities
+          <div className="home-v2-dot home-v2-dot-1"></div>
+          <div className="home-v2-dot home-v2-dot-2"></div>
+
+          <div className="home-v2-photo">
+
+            <img
+              src="/profile.png"
+              alt="Navinkumar D"
+            />
+
+          </div>
+
+          <div className="home-v2-badge">
+            <span></span>
+            Open to Opportunities
+          </div>
+
         </div>
 
       </div>
