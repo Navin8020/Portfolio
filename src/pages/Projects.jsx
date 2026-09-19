@@ -5,7 +5,7 @@ function Projects() {
       title: "NeuroLocusAI",
       category: "AI / MACHINE LEARNING",
       status: "Completed",
-      image: "/project-neurolocus.png",
+      image: "neurolocus.png",
       description:
         "An AI-powered web application designed for automated ependymoma detection and localization from MRI brain images.",
       technologies: [
@@ -32,7 +32,7 @@ function Projects() {
       title: "SportIq",
       category: "WEB DEVELOPMENT / SPORTS",
       status: "In Development",
-      image: "/project-sportiq.png",
+      image: "Sportiq.png",
       description:
         "A modern sports analysis platform designed to provide football match information, events, lineups, player details, and detailed match statistics using REST APIs.",
       technologies: [
