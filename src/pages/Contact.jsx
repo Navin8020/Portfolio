@@ -1,51 +1,41 @@
 function Contact() {
   return (
     <section className="page-section contact-page">
-
       {/* HEADER */}
       <div className="contact-header">
-
-        <p className="small-title">
-          GET IN TOUCH
-        </p>
+        <p className="small-title">GET IN TOUCH</p>
 
         <h1>
           Let's build something
           <span> meaningful.</span>
         </h1>
 
-        <p>
+        <p className="contact-intro">
           I'm open to internships, entry-level opportunities, software
           development roles, and interesting projects. Feel free to reach
           out and connect with me.
         </p>
-
       </div>
-
 
       {/* CONTACT CONTENT */}
       <div className="contact-layout">
 
-        {/* MAIN CONTACT CARD */}
+        {/* LEFT SIDE */}
         <div className="contact-main">
-
           <div className="contact-card">
 
-            <span className="contact-number">
-              01
-            </span>
+            <div className="contact-card-top">
+              <span className="contact-number">01</span>
+              <span className="contact-arrow">↗</span>
+            </div>
 
-            <h2>
-              Start a conversation
-            </h2>
+            <h2>Start a conversation</h2>
 
             <p className="contact-description">
               Whether you want to discuss an opportunity, a project, or
               simply connect, you can reach me through the links below.
             </p>
 
-
-            {/* CONTACT ITEMS */}
             <div className="contact-items">
 
               {/* EMAIL */}
@@ -53,29 +43,17 @@ function Contact() {
                 href="mailto:knaveeen34@gmail.com"
                 className="contact-item"
               >
-
                 <div className="contact-icon email-icon">
                   @
                 </div>
 
                 <div className="contact-item-content">
-
-                  <span>
-                    EMAIL
-                  </span>
-
-                  <strong>
-                    knaveeen34@gmail.com
-                  </strong>
-
+                  <span>EMAIL</span>
+                  <strong>knaveeen34@gmail.com</strong>
                 </div>
 
-                <b>
-                  ↗
-                </b>
-
+                <span className="contact-item-arrow">↗</span>
               </a>
-
 
               {/* GITHUB */}
               <a
@@ -84,29 +62,17 @@ function Contact() {
                 rel="noopener noreferrer"
                 className="contact-item"
               >
-
                 <div className="contact-icon github-icon">
                   GH
                 </div>
 
                 <div className="contact-item-content">
-
-                  <span>
-                    GITHUB
-                  </span>
-
-                  <strong>
-                    github.com/Navin8020
-                  </strong>
-
+                  <span>GITHUB</span>
+                  <strong>github.com/Navin8020</strong>
                 </div>
 
-                <b>
-                  ↗
-                </b>
-
+                <span className="contact-item-arrow">↗</span>
               </a>
-
 
               {/* LINKEDIN */}
               <a
@@ -115,35 +81,23 @@ function Contact() {
                 rel="noopener noreferrer"
                 className="contact-item"
               >
-
                 <div className="contact-icon linkedin-icon">
                   in
                 </div>
 
                 <div className="contact-item-content">
-
-                  <span>
-                    LINKEDIN
-                  </span>
-
+                  <span>LINKEDIN</span>
                   <strong>
                     linkedin.com/in/navin-kumar-33b36b36a
                   </strong>
-
                 </div>
 
-                <b>
-                  ↗
-                </b>
-
+                <span className="contact-item-arrow">↗</span>
               </a>
 
             </div>
-
           </div>
-
         </div>
-
 
         {/* RIGHT SIDE */}
         <aside className="contact-side">
@@ -151,58 +105,45 @@ function Contact() {
           {/* AVAILABILITY */}
           <div className="contact-highlight">
 
-            <span>
+            <span className="contact-label">
               AVAILABILITY
             </span>
 
             <div className="availability">
-
               <span className="availability-dot"></span>
 
-              Open to Opportunities
-
+              <strong>Open to Opportunities</strong>
             </div>
 
             <p>
-              Currently interested in starting my professional career
-              and gaining practical industry experience.
+              Currently interested in starting my professional
+              career and gaining practical industry experience.
             </p>
 
           </div>
 
-
-          {/* AREAS OF INTEREST */}
+          {/* INTERESTS */}
           <div className="contact-highlight">
 
-            <span>
+            <span className="contact-label">
               AREAS OF INTEREST
             </span>
 
-            <div className="interest-tags">
+            <div className="contact-interest-tags">
 
-              <span>
-                Software Development
-              </span>
-
-              <span>
-                Web Development
-              </span>
-
-              <span>
-                AI / ML
-              </span>
-
-              <span>
-                API Development
-              </span>
+              <span>Software Development</span>
+              <span>Web Development</span>
+              <span>AI / ML</span>
+              <span>API Development</span>
 
             </div>
 
           </div>
 
-
           {/* CTA */}
           <div className="contact-cta">
+
+            <div className="cta-decoration"></div>
 
             <div className="cta-circle">
               ↗
@@ -220,7 +161,8 @@ function Contact() {
               href="mailto:knaveeen34@gmail.com"
               className="cta-link"
             >
-              Send me an email →
+              Send me an email
+              <span>→</span>
             </a>
 
           </div>
@@ -228,7 +170,6 @@ function Contact() {
         </aside>
 
       </div>
-
     </section>
   );
 }
