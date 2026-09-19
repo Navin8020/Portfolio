@@ -3,21 +3,18 @@ function Projects() {
     {
       number: "01",
       title: "NeuroLocusAI",
-      category: "AI / DEEP LEARNING",
+      category: "AI / MACHINE LEARNING",
       status: "Completed",
-      image: "neurolocus.png",
-
+      image: "/project-neurolocus.png",
       description:
         "An AI-powered web application designed for automated ependymoma detection and localization from MRI brain images.",
-
       technologies: [
-        "Web Development",
-        "CNN",
+        "Python",
+        "Machine Learning",
         "Deep Learning",
-        
+        "React",
         "PostgreSQL",
       ],
-
       features: [
         "MRI image upload and processing",
         "Automated tumor detection",
@@ -25,10 +22,7 @@ function Projects() {
         "Detection history",
         "PostgreSQL database integration",
       ],
-
-      liveLink:
-        "https://automated-ependymoma-detection.vercel.app/",
-
+      liveLink: "https://automated-ependymoma-detection.vercel.app/",
       githubLink:
         "https://github.com/Mageshwaran88/automated-ependymoma-detection-be",
     },
@@ -38,11 +32,9 @@ function Projects() {
       title: "SportIq",
       category: "WEB DEVELOPMENT / SPORTS",
       status: "In Development",
-      image: "Sportiq.png",
-
+      image: "/project-sportiq.png",
       description:
         "A modern sports analysis platform designed to provide football match information, events, lineups, player details, and detailed match statistics using REST APIs.",
-
       technologies: [
         "React",
         "Vite",
@@ -50,7 +42,6 @@ function Projects() {
         "REST API",
         "API-Football",
       ],
-
       features: [
         "Live football fixtures",
         "Match events and goals",
@@ -58,184 +49,185 @@ function Projects() {
         "Player lineups",
         "Detailed match statistics",
       ],
-
       liveLink: "#",
       githubLink: "#",
     },
   ];
 
   return (
-    <section className="page-section projects-page">
+    <section className="projects-v2">
 
-      {/* HEADER */}
-      <div className="projects-header">
+      <div className="projects-v2-container">
 
-        <p className="small-title">
-          MY WORK
-        </p>
+        {/* HEADER */}
+        <div className="projects-v2-header">
 
-        <h1>
-          Projects that
-          <span> solve problems.</span>
-        </h1>
+          <div className="projects-v2-label">
+            <span></span>
+            MY WORK
+          </div>
 
-        <p>
-          A selection of projects I've developed while exploring software
-          development, artificial intelligence, machine learning, and
-          modern web technologies.
-        </p>
+          <h1>
+            Projects that
+            <strong>solve problems.</strong>
+          </h1>
 
-      </div>
+          <p>
+            A selection of projects I've developed while exploring software
+            development, artificial intelligence, machine learning, and
+            modern web technologies.
+          </p>
 
-
-      {/* PROJECTS */}
-      <div className="projects-list">
-
-        {projects.map((project) => (
-          <article
-            className="project-card-new"
-            key={project.number}
-          >
-
-            {/* PROJECT PREVIEW */}
-            <div className="project-preview">
-
-              <img
-                src={project.image}
-                alt={`${project.title} project preview`}
-              />
-
-              <div className="project-preview-overlay">
-                <span>
-                  VIEW PROJECT
-                </span>
-              </div>
-
-            </div>
+        </div>
 
 
-            {/* TOP */}
-            <div className="project-top">
+        {/* PROJECT LIST */}
+        <div className="projects-v2-list">
 
-              <span className="project-number">
-                {project.number}
-              </span>
+          {projects.map((project) => (
+            <article
+              className="projects-v2-card"
+              key={project.number}
+            >
 
-              <div className="project-top-right">
+              {/* TOP LINE */}
+              <div className="projects-v2-card-line"></div>
 
-                <span className="project-category">
-                  {project.category}
-                </span>
 
-                <span
-                  className={
-                    project.status === "Completed"
-                      ? "project-status completed"
-                      : "project-status development"
-                  }
-                >
+              {/* PROJECT IMAGE */}
+              <div className="projects-v2-image">
 
-                  <span className="project-status-dot"></span>
+                <img
+                  src={project.image}
+                  alt={`${project.title} project preview`}
+                />
 
-                  {project.status}
-
-                </span>
+                <div className="projects-v2-image-overlay">
+                  <span>{project.number}</span>
+                  <strong>{project.title}</strong>
+                </div>
 
               </div>
 
-            </div>
 
+              {/* PROJECT TOP */}
+              <div className="projects-v2-top">
 
-            {/* CONTENT */}
-            <div className="project-content">
+                <span className="projects-v2-number">
+                  {project.number}
+                </span>
 
-              <div className="project-main">
+                <div className="projects-v2-meta">
 
-                <h2>
-                  {project.title}
-                </h2>
+                  <span className="projects-v2-category">
+                    {project.category}
+                  </span>
 
-                <p className="project-description">
-                  {project.description}
-                </p>
-
-                <div className="technology-list">
-
-                  {project.technologies.map((technology) => (
-                    <span key={technology}>
-                      {technology}
-                    </span>
-                  ))}
+                  <span
+                    className={
+                      project.status === "Completed"
+                        ? "projects-v2-status completed"
+                        : "projects-v2-status development"
+                    }
+                  >
+                    <span></span>
+                    {project.status}
+                  </span>
 
                 </div>
 
               </div>
 
 
-              {/* FEATURES */}
-              <div className="project-features">
+              {/* PROJECT CONTENT */}
+              <div className="projects-v2-content">
 
-                <h3>
-                  Key Features
-                </h3>
+                <div className="projects-v2-main">
 
-                <ul>
+                  <h2>{project.title}</h2>
 
-                  {project.features.map((feature) => (
-                    <li key={feature}>
+                  <p className="projects-v2-description">
+                    {project.description}
+                  </p>
 
-                      <span className="feature-check">
-                        ✓
+
+                  {/* TECHNOLOGIES */}
+                  <div className="projects-v2-technologies">
+
+                    {project.technologies.map((technology) => (
+                      <span key={technology}>
+                        {technology}
                       </span>
+                    ))}
 
-                      {feature}
+                  </div>
 
-                    </li>
-                  ))}
+                </div>
 
-                </ul>
+
+                {/* FEATURES */}
+                <div className="projects-v2-features">
+
+                  <span className="projects-v2-feature-label">
+                    KEY FEATURES
+                  </span>
+
+                  <ul>
+
+                    {project.features.map((feature) => (
+                      <li key={feature}>
+                        <span>✓</span>
+                        {feature}
+                      </li>
+                    ))}
+
+                  </ul>
+
+                </div>
 
               </div>
 
-            </div>
 
+              {/* ACTIONS */}
+              <div className="projects-v2-actions">
 
-            {/* ACTIONS */}
-            <div className="project-actions">
-
-              {project.liveLink !== "#" && (
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="primary-button"
-                >
-                  Live Project ↗
-                </a>
-              )}
-
-              {project.githubLink !== "#" && (
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="secondary-button"
-                >
-                  GitHub ↗
-                </a>
-              )}
-
-              {project.liveLink === "#" &&
-                project.githubLink === "#" && (
-                  <span className="project-coming">
-                    Project in Development
-                  </span>
+                {project.liveLink !== "#" && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="projects-v2-primary"
+                  >
+                    Live Project
+                    <span>↗</span>
+                  </a>
                 )}
 
-            </div>
+                {project.githubLink !== "#" && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="projects-v2-secondary"
+                  >
+                    GitHub
+                    <span>↗</span>
+                  </a>
+                )}
 
-          </article>
-        ))}
+                {project.liveLink === "#" &&
+                  project.githubLink === "#" && (
+                    <span className="projects-v2-development-message">
+                      Project currently in development
+                    </span>
+                  )}
+
+              </div>
+
+            </article>
+          ))}
+
+        </div>
 
       </div>
 
